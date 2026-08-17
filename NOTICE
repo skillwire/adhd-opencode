@@ -1,0 +1,16 @@
+opencode-adhd-style
+
+This software is licensed under the GNU Affero General Public License v3.0.
+See LICENSE for the full license text.
+
+This package is a compressed derivative of the "Attention-kind" output style
+from attention-span (https://github.com/alexgreensh/attention-span),
+Copyright Alex Green, licensed AGPL-3.0.
+
+It also incorporates rules from i-have-adhd
+(https://github.com/ayghri/i-have-adhd), Copyright its contributors,
+licensed MIT.
+
+The compression, the "Multi-step work", "Pre-send check", "Safety exceptions"
+and "genuine breadth" additions, and the opencode packaging are original work
+by Yuri Shubin (https://github.com/shhubin).

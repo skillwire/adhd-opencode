@@ -1,0 +1,5 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  // Always-on output style: point "instructions" at the copied style file.
+  "instructions": ["~/.config/opencode/output-style.md"]
+}
