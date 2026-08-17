@@ -1,5 +1,7 @@
 # adhd-style — a SkillWire output style
 
+**[English](README.md) · [Русский](README.ru.md)**
+
 ![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)
 ![Install](https://img.shields.io/badge/install-npx%20skills%20add%20skillwire%2Fadhd--opencode-lightgrey)
 ![Release](https://img.shields.io/github/v/release/skillwire/adhd-opencode)
