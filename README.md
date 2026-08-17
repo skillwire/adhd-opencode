@@ -48,7 +48,7 @@ Restart opencode. That's it — every session, every subagent, compaction-proof.
 ### On-demand (skill tool / npx skills)
 
 ```bash
-npx skills add agentic-society/opencode-adhd-style
+npx skills add skillwire/opencode-adhd-style
 ```
 
 Then load it in a session with the `skill` tool, or set a `/adhd-style` command:
