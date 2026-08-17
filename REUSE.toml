@@ -1,0 +1,11 @@
+version = 1
+
+SPDX-PackageName = "adhd-opencode"
+SPDX-PackageSupplier = "SkillWire"
+SPDX-PackageDownloadLocation = "https://github.com/skillwire/adhd-opencode"
+
+[[annotations]]
+path = "**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Yuri Shubin"
+SPDX-License-Identifier = "AGPL-3.0-only"

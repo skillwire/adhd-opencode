@@ -1,16 +1,21 @@
 adhd-opencode
 
-This software is licensed under the GNU Affero General Public License v3.0.
-See LICENSE for the full license text.
+This repository is licensed under the GNU Affero General Public License v3.0.
+See LICENSE and LICENSES/AGPL-3.0-only.txt. License coverage is declared with
+SPDX identifiers via REUSE (see REUSE.toml); run `reuse lint` to verify.
 
-This package is a compressed derivative of the "Attention-kind" output style
-from attention-span (https://github.com/alexgreensh/attention-span),
+Attribution:
+
+This repository is a compressed derivative of the "Attention-kind" output
+style from attention-span (https://github.com/alexgreensh/attention-span),
 Copyright Alex Green, licensed AGPL-3.0.
 
 It also incorporates rules from i-have-adhd
 (https://github.com/ayghri/i-have-adhd), Copyright its contributors,
-licensed MIT.
+licensed MIT. The combined style file is licensed AGPL-3.0-only (the
+derivative license); the MIT upstream is acknowledged here.
 
 The compression, the "Multi-step work", "Pre-send check", "Safety exceptions"
-and "genuine breadth" additions, and the opencode packaging are original work
-by Yuri Shubin (https://github.com/shhubin).
+and "genuine breadth" additions, the validation scripts and the packaging are
+original work by Yuri Shubin (https://github.com/shhubin).
+

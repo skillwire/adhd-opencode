@@ -29,7 +29,8 @@ Restart opencode. Verify in any session: ask the agent to quote the first line o
 ## Option 2 — On-demand (skill tool)
 
 ```bash
-npx skills add skillwire/adhd-opencode
+npx skills add skillwire/adhd-opencode          # latest
+npx skills add skillwire/adhd-opencode@v0.1     # pin a release (ref stored in the skill lock)
 ```
 
 or copy manually:

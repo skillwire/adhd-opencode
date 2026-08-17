@@ -1,10 +1,12 @@
-# adhd-style for opencode
+# adhd-style — a SkillWire output style
 
 ![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)
 ![Install](https://img.shields.io/badge/install-npx%20skills%20add%20skillwire%2Fadhd--opencode-lightgrey)
 ![Release](https://img.shields.io/github/v/release/skillwire/adhd-opencode)
 
 ADHD-friendly output styling that actually survives the session: action-first, numbered steps, concrete next actions, time estimates, no preamble. No ADHD diagnosis needed — the style shapes how the agent *talks*, not what it does.
+
+This repo is the **SkillWire catalog** of output styles for coding agents — `adhd-style` is the first entry; more styles will live here under `skills/<name>/`. The repo name (`adhd-opencode`) and the skill name (`adhd-style`) are intentionally independent: `npx skills add` keys installs and updates by the skill's `name`, not the repo.
 
 Battle-tested: the ruleset here survived six independent red-team audits against the opencode plugin/skill/gate mechanisms and came out simpler each time.
 
@@ -25,6 +27,19 @@ The same question — *"how do I speed up my TypeScript build?"* — without and
 | A paragraph that opens with context, lists possibilities, buries the recommendation, and closes with "hope this helps" | `**→ Run npx tsc --noEmit and fix what it names.**` then a numbered 1-2-3, a caveat, and one next action. |
 
 Measured on the upstream style this derives from: work unchanged (97%/97% hidden tests), output ~43% shorter, the answer lands in the first line 75% of the time vs 3%. (Self-reported by the upstream benchmark; reproduced in [attention-span](https://github.com/alexgreensh/attention-span).)
+
+## Compatibility
+
+The style body is plain markdown with no harness-specific syntax, so it can be dropped into any agent's rules file. Verified behavior:
+
+| Harness | Always-on (rules file) | On-demand (skill) | Notes |
+|---|---|---|---|
+| opencode | ✅ `instructions` / AGENTS.md | ✅ skill tool | Re-injected every turn, survives compaction, applies to subagents |
+| Claude Code | ✅ `CLAUDE.md` / `output-styles` | ✅ skill | Frontmatter stripped; body plain |
+| Codex / AGENTS.md | ✅ append to `AGENTS.md` | — | Plain markdown body |
+| Gemini CLI | ✅ `GEMINI.md` | — | Plain markdown body |
+
+> Always-on is the reliable path (documented trade-off in [INSTALL](INSTALL.md)); on-demand rulesets can drift on long sessions.
 
 ## Install (opencode)
 
@@ -49,7 +64,8 @@ Restart opencode. That's it — every session, every subagent, compaction-proof.
 ### On-demand (skill tool / npx skills)
 
 ```bash
-npx skills add skillwire/adhd-opencode
+npx skills add skillwire/adhd-opencode          # latest
+npx skills add skillwire/adhd-opencode@v0.1     # pin a release
 ```
 
 Then load it in a session with the `skill` tool, or set a `/adhd-style` command:

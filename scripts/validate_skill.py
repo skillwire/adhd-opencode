@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 Yuri Shubin
+# SPDX-License-Identifier: AGPL-3.0-only
 import re
 import sys
 from pathlib import Path
@@ -49,6 +51,16 @@ else:
     ):
         if sec not in stext:
             errors.append(f"output-style.md: missing section '{sec}'")
+    # cross-harness: no YAML frontmatter (so it can be appended to any harness
+    # rules file directly) and no harness-specific template syntax
+    if re.match(r"^---\r?\n", stext):
+        errors.append("output-style.md must NOT have YAML frontmatter (plain body for all harnesses)")
+    if "{{" in stext or "}}" in stext:
+        errors.append("output-style.md: contains harness template placeholders {{ }}")
+    # strip test: first line is a comment, the rest must be plain markdown
+    body = re.sub(r"^<!--.*?-->\s*\n", "", stext, count=1, flags=re.S)
+    if not body.strip():
+        errors.append("output-style.md: empty body after strip")
 
 # 3. no duplicated root copy (single source of truth)
 if (ROOT / "output-style.md").exists():
