@@ -29,7 +29,7 @@ Restart opencode. Verify in any session: ask the agent to quote the first line o
 ## Option 2 — On-demand (skill tool)
 
 ```bash
-npx skills add skillwire/opencode-adhd-style
+npx skills add skillwire/adhd-opencode
 ```
 
 or copy manually:
@@ -62,7 +62,7 @@ Use the `adhd-style` skill and apply its ruleset for the rest of this session, u
 ## Updating
 
 ```bash
-curl -sfL https://raw.githubusercontent.com/shhubin/opencode-adhd-style/main/output-style.md \
+curl -sfL https://raw.githubusercontent.com/skillwire/adhd-opencode/main/output-style.md \
   -o ~/.config/opencode/output-style.md
 ```
 
