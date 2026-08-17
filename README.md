@@ -1,5 +1,8 @@
 # adhd-style for opencode
 
+![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)
+![Install](https://img.shields.io/badge/install-npx%20skills%20add%20agentic--society%2Fopencode--adhd--style-lightgrey)
+
 ADHD-friendly output styling that actually survives the session: action-first, numbered steps, concrete next actions, time estimates, no preamble. No ADHD diagnosis needed — the style shapes how the agent *talks*, not what it does.
 
 Battle-tested: the ruleset here survived six independent red-team audits against the opencode plugin/skill/gate mechanisms and came out simpler each time.
@@ -45,7 +48,7 @@ Restart opencode. That's it — every session, every subagent, compaction-proof.
 ### On-demand (skill tool / npx skills)
 
 ```bash
-npx skills add shhhubin/opencode-adhd-style
+npx skills add agentic-society/opencode-adhd-style
 ```
 
 Then load it in a session with the `skill` tool, or set a `/adhd-style` command:

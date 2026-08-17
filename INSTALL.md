@@ -29,7 +29,7 @@ Restart opencode. Verify in any session: ask the agent to quote the first line o
 ## Option 2 — On-demand (skill tool)
 
 ```bash
-npx skills add shhhubin/opencode-adhd-style
+npx skills add agentic-society/opencode-adhd-style
 ```
 
 or copy manually:
