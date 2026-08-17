@@ -2,6 +2,7 @@
 
 ![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)
 ![Install](https://img.shields.io/badge/install-npx%20skills%20add%20skillwire%2Fadhd--opencode-lightgrey)
+![Release](https://img.shields.io/github/v/release/skillwire/adhd-opencode)
 
 ADHD-friendly output styling that actually survives the session: action-first, numbered steps, concrete next actions, time estimates, no preamble. No ADHD diagnosis needed — the style shapes how the agent *talks*, not what it does.
 
@@ -31,7 +32,7 @@ Measured on the upstream style this derives from: work unchanged (97%/97% hidden
 
 ```bash
 mkdir -p ~/.config/opencode
-cp output-style.md ~/.config/opencode/output-style.md
+cp skills/adhd-style/output-style.md ~/.config/opencode/output-style.md
 ```
 
 Then add to `~/.config/opencode/opencode.jsonc`:
@@ -65,12 +66,12 @@ Use the `adhd-style` skill and apply its ruleset for the rest of this session.
 | File | What |
 |---|---|
 | `skills/adhd-style/SKILL.md` | The skill (frontmatter + full ruleset) for the skill tool / `npx skills` |
-| `output-style.md` | Same body, no frontmatter — drop into `instructions` for always-on |
+| `skills/adhd-style/output-style.md` | The style body, no frontmatter — the single source; drop into `instructions` for always-on |
 | `install/opencode.jsonc.example` | Minimal wiring example |
 
 ## Tune it
 
-The style is a plain markdown body. Fork, edit `output-style.md`, keep your copy. Zero dependencies.
+The style is a plain markdown body. Fork, edit `skills/adhd-style/output-style.md`, keep your copy. Zero dependencies.
 
 ## License & attribution
 

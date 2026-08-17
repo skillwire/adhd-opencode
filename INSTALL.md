@@ -10,7 +10,7 @@ The style is loaded as an instruction file: re-injected into the system prompt e
 
 ```bash
 mkdir -p ~/.config/opencode
-cp output-style.md ~/.config/opencode/output-style.md
+cp skills/adhd-style/output-style.md ~/.config/opencode/output-style.md
 ```
 
 Add the `instructions` key to `~/.config/opencode/opencode.jsonc` (create the file if missing):
@@ -53,7 +53,7 @@ Use the `adhd-style` skill and apply its ruleset for the rest of this session, u
 
 ## Option 3 — Other harnesses
 
-`output-style.md` is plain markdown with no opencode-specific syntax. Append it to your harness rules file:
+`skills/adhd-style/output-style.md` is plain markdown with no opencode-specific syntax. Append it to your harness rules file:
 
 - **Claude Code:** `~/.claude/CLAUDE.md` or `~/.claude/output-styles/*.md`
 - **Codex / AGENTS.md harnesses:** append to `~/.codex/AGENTS.md` (or your global `AGENTS.md`) inside `<!-- adhd-style:start -->` / `<!-- adhd-style:end -->` fences
@@ -62,7 +62,7 @@ Use the `adhd-style` skill and apply its ruleset for the rest of this session, u
 ## Updating
 
 ```bash
-curl -sfL https://raw.githubusercontent.com/skillwire/adhd-opencode/main/output-style.md \
+curl -sfL https://raw.githubusercontent.com/skillwire/adhd-opencode/main/skills/adhd-style/output-style.md \
   -o ~/.config/opencode/output-style.md
 ```
 
