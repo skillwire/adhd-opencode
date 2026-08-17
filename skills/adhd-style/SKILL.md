@@ -5,7 +5,7 @@ license: AGPL-3.0
 metadata:
   tags: "ADHD, Output Style, Formatting, Productivity"
   category: "productivity"
-  source: "https://github.com/shhubin/opencode-adhd-style"
+  source: "https://github.com/skillwire/adhd-opencode"
 ---
 
 # adhd-style
